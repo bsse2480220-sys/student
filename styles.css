@@ -1,51 +1,189 @@
-:root { font-family: Arial, Helvetica, sans-serif; color: #212529; background: #fff; font-synthesis: none; }
-* { box-sizing: border-box; }
-body { margin: 0; min-width: 320px; background: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
-.portal-nav { min-height: 48px; padding: 5px 0; }
-.portal-container { max-width: 884px; }
-.portal-nav .navbar-brand { font-size: 16px; margin-right: 14px; color: #19365b; }
-.portal-nav .nav-link { font-size: 13px; color: #667085; padding: 8px 7px; }
-.nav-search input { width: 152px; height: 32px; font-size: 12px; }
-.nav-search .btn { height: 32px; font-size: 12px; }
-.settings-link { white-space: nowrap; }
-.directory-container { max-width: 884px; padding-top: 19px; padding-bottom: 26px; }
-.custom-breadcrumb { background: #292e33; color: #fff; border-radius: 5px; min-height: 34px; padding: 10px 14px; margin-bottom: 19px; align-items: center; font-size: 11px; font-weight: 600; }
-.custom-breadcrumb .breadcrumb-item, .custom-breadcrumb .breadcrumb-item.active { color: #fff; }
-.custom-breadcrumb .breadcrumb-item a { color: #fff; text-decoration: none; }
-.custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before { color: #fff; }
-.custom-breadcrumb .code-crumb { color: #c9d0d6; font-family: monospace; font-weight: 400; }
-.page-heading { margin-bottom: 18px; }
-.page-heading h1 { font-size: 25px; line-height: 1.2; font-weight: 400; margin: 0; }
-.add-btn { background: #18336d; border-color: #18336d; border-radius: 3px; padding: 8px 13px; font-size: 12px; }
-.student-grid { --bs-gutter-x: 24px; --bs-gutter-y: 20px; margin-left: 0; margin-right: 0; padding: 0 8px; }
-.student-col { padding-left: 12px; padding-right: 12px; }
-.student-card { border-color: #d9dde2; border-radius: 4px; overflow: hidden; box-shadow: none; }
-.avatar-panel { height: 85px; background: #c9c9d1; display: flex; justify-content: center; align-items: flex-end; overflow: hidden; }
-.avatar { width: 82px; height: 82px; margin-bottom: 0; }
-.student-card .card-body { padding: 13px 13px 12px; }
-.student-name { font-size: 16px; font-weight: 700; line-height: 1.25; margin: 0 0 7px; color: #101828; }
-.student-meta { font-size: 11px; line-height: 1.28; color: #111827; }
-.student-card .btn { font-size: 11px; border-radius: 4px; padding: 5px 7px; white-space: nowrap; }
-.student-card .delete-btn { min-width: 60px; }
-.student-card .demo-button { font-size: 10px; padding: 4px 5px; letter-spacing: .1px; }
-.views-line { display: flex; justify-content: space-between; align-items: center; margin: 13px 0 13px; color: #697586; font-size: 11px; }
-.views-line .badge { font-size: 9px; font-weight: 600; }
-.student-card .details-toggle { color: #657080; background: #f8f9fa; border-color: #d9dde2; padding: 5px; }
-.contact-box { border: 1px solid #d9dde2; border-radius: 4px; background: #f8f9fa; padding: 7px 7px; font-size: 10.5px; line-height: 1.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.contact-box div { overflow: hidden; text-overflow: ellipsis; }
-.pagination-wrap { margin: 26px 0 26px; }
-.pagination .page-link { color: #0d6efd; min-width: 29px; text-align: center; padding: 7px 9px; font-size: 12px; }
-.pagination .page-item.active .page-link { background: #0d6efd; border-color: #0d6efd; color: #fff; }
-.pagination .page-item.disabled .page-link { color: #6c757d; background: #e9ecef; }
-.directory-alert { margin: 0 8px; border: 0; border-radius: 4px; background: #d1e7ec; color: #08718a; padding: 17px 45px 17px 14px; font-size: 11px; }
-.directory-alert .btn-close { padding: 18px; transform: scale(.8); }
-.site-footer { background: #212529; color: #fff; min-height: 125px; padding: 20px 0 24px; }
-.footer-inner { max-width: 884px; display: grid; grid-template-columns: 1fr 1fr; }
-.site-footer h2 { font-size: 13px; font-weight: 700; margin: 0 0 9px; }
-.site-footer a { display: block; color: #e4e6e8; font-size: 11px; text-decoration: none; margin-bottom: 5px; }
-.search-status { margin: -5px 8px 12px; font-size: 12px; color: #667085; }
-.modal-backdrop-custom { position: fixed; inset: 0; z-index: 1055; background: rgba(0,0,0,.5); display: flex; align-items: center; justify-content: center; padding: 16px; }
-.modal-backdrop-custom .modal-dialog { width: 100%; max-width: 500px; margin: 0; }
-@media (min-width: 992px) { .student-col { flex: 0 0 25%; max-width: 25%; } }
-@media (max-width: 767.98px) { .directory-container { padding: 16px 15px 24px; } .portal-container { padding-left: 16px; padding-right: 16px; } .nav-search { flex-wrap: wrap; padding: 8px 0; } .nav-search input { flex: 1; width: auto; } .page-heading h1 { font-size: 22px; } .student-grid { padding: 0; --bs-gutter-x: 16px; } .student-col { padding-left: 8px; padding-right: 8px; } .custom-breadcrumb { overflow-x: auto; white-space: nowrap; } .footer-inner { padding-left: 24px; padding-right: 24px; } }
-@media (max-width: 420px) { .student-grid .student-col { flex: 0 0 100%; max-width: 100%; } .add-btn { padding: 7px 9px; font-size: 11px; } .page-heading h1 { font-size: 20px; } }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #212529;
+  }
+  
+  .navbar {
+    min-height: 58px;
+  }
+  
+  .navbar-container {
+    max-width: 780px;
+  }
+  
+  .navbar-brand {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .nav-link {
+    font-size: 12px;
+  }
+  
+  .main-content {
+    max-width: 780px;
+    margin: 18px auto 40px;
+  }
+  
+  .custom-breadcrumb {
+    background-color: #292d32;
+    padding: 10px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .custom-breadcrumb .breadcrumb-item {
+    font-size: 11px;
+    color: white;
+  }
+  
+  .custom-breadcrumb a {
+    color: white;
+  }
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .page-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  .student-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .avatar-placeholder {
+    height: 80px;
+    background-color: #c8c8d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avatar-placeholder svg {
+    width: 120px;
+    height: 80px;
+  }
+  
+  .student-card .card-body {
+    padding: 10px;
+  }
+  
+  .student-name {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .student-info {
+    font-size: 10px;
+    line-height: 1.4;
+    color: #555;
+  }
+  
+  .student-buttons {
+    display: flex;
+    gap: 6px;
+    margin: 8px 0 6px;
+  }
+  
+  .student-buttons .btn {
+    font-size: 10px;
+    padding: 4px 8px;
+    flex: 1;
+  }
+  
+  .extra-button {
+    width: 100%;
+    font-size: 9px;
+    padding: 3px;
+    margin-bottom: 5px;
+  }
+  
+  .profile-views {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: #777;
+    margin: 8px 0;
+  }
+  
+  .profile-views .badge {
+    font-size: 8px;
+  }
+  
+  .details-button {
+    width: 100%;
+    font-size: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-details {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 8px;
+    font-size: 9px;
+    line-height: 1.6;
+  }
+  
+  .pagination {
+    margin-top: 15px;
+  }
+  
+  .pagination .page-link {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+  
+  .site-footer {
+    background-color: #212529;
+    color: white;
+    min-height: 100px;
+    padding: 18px 0;
+  }
+  
+  .footer-content {
+    max-width: 780px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-content h6 {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  
+  .footer-content a,
+  .footer-content p {
+    display: block;
+    color: #ddd;
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      margin: 15px;
+    }
+  
+    .page-header {
+      gap: 10px;
+    }
+  
+    .footer-content {
+      margin: 0 15px;
+    }
+  }
